@@ -6,15 +6,17 @@ const cors = require("cors");
 // const ProductModel = require("./Models/OrderModel")
 
 app.use(express.json());
-app.use(cors({
-  origin:"*"
-}));
+app.use(cors());
 app.use('/product',router)
 
-const port = 9000;
-app.listen(port, () => {
-  console.log(` app listening on port ${port}`);
-});
+const PORT = 9000;
+// app.listen(port, () => {
+//   console.log(` app listening on port ${port}`);
+// });
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}.`));
+
+
 mongoose
   .connect(
     "mongodb+srv://arpitThakur4931:Bullshit7@cluster0.l9btlcq.mongodb.net/?retryWrites=true&w=majority"
