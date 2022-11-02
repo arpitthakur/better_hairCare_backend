@@ -1,5 +1,7 @@
+require("dotenv").config()
+const STRIPE_SECRET_KEY = process.env.SECRET_KEY
 const stripe = require("stripe")(
-  "sk_test_51LsLqrSHBiOR4sbDFKqoULLrC41TMjZrgRX12RGl83zQS8AFCzC2Esvt5egIbL9nztFfZRENTy4qq8T3CbmNARjg00tcRmDRBN"
+  STRIPE_SECRET_KEY
 );
 
 // get the product details
